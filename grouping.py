@@ -15,7 +15,12 @@ data1 = {'Name':['Jai', 'Anuj', 'Jai', 'Princi',
 # Convert the dictionary into DataFrame  
 df = pd.DataFrame(data1)
  
-print(df) 
+# print(df) 
 
-df.groupby('Name')
-print(df.groupby('Name').groups)
+# print(df.groupby('Name').groups)
+
+grp = df.groupby(['Name','Qualification'])
+
+for name,group in grp:
+    print(name)
+    print(group)
