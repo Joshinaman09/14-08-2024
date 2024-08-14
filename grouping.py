@@ -16,3 +16,6 @@ data1 = {'Name':['Jai', 'Anuj', 'Jai', 'Princi',
 df = pd.DataFrame(data1)
  
 print(df) 
+
+df.groupby('Name')
+print(df.groupby('Name').groups)
